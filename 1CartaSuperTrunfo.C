@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//  armazenar os dados carta
+//  armazenar os dados carta 1
 typedef struct {
     char estado;
     char codigo[4];
@@ -37,6 +37,52 @@ int main() {
     printf("Area (em km): %.2f \n", cartaPernambuco.area);
     printf("PIB: %.2f bilhoes de reais \n", cartaPernambuco.pib);
     printf("Pontos Turisticos: %d \n", cartaPernambuco.pontosTuristicos);
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+// Armazenar os dados de uma carta 2
+typedef struct {
+    char estado;
+    char codigo[4];
+    char nomeCidade[50];
+    int populacao;
+    float area;
+    float pib;
+    int pontosTuristicos;
+    int Populacao;
+    int Area;
+    int PontosTuristicos;
+}   Carta;
+
+int main() {
+    // Criação da carta Super Trunfo de Ceara
+    Carta cartaCeara;
+    cartaCeara.estado = 'C';
+    strcpy(cartaCeara.codigo, "P02");
+    strcpy(cartaCeara.nomeCidade, "Fortaleza");
+    cartaCeara.pib = 213.601;
+    cartaCeara.populacao = 8794957;
+    cartaCeara.area = 218.84;
+    cartaCeara.pontosTuristicos = 320;
+    cartaCeara.Area = 656868;
+    
+
+    // Impressão dados da carta
+    printf("Estado: %c \n", cartaCeara.estado);
+    printf("Codigo da Carta: %s \n", cartaCeara.codigo);
+    printf("Cidade: %s \n", cartaCeara.nomeCidade);
+    printf("Populacao: %d \n", cartaCeara.populacao);
+    printf("Area (em km): %.2f \n", cartaCeara.area);
+    printf("PIB: %.2f bilhoes de reais\n", cartaCeara.pib);
+    printf("Pontos Turisticos: %d \n", cartaCeara.pontosTuristicos);
+    printf("Area: %d10 \n", cartaCeara.Area);
+    
 
     return 0;
 }
